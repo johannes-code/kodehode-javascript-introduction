@@ -199,7 +199,7 @@ If the parameter received is true, return "😎Yeah😎". If the parameter recei
 is false, return "😎Chill😎"
 
 If the parameter received is any other datatype:
-Return "😎Primitive values only😎"
+Return "😎Primitive values only😎"  
 
 ******************************************************************************/
 
