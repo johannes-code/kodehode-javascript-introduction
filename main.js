@@ -15,8 +15,8 @@ Read the terminal output before and after to see the difference
 ******************************************************************************/
 
 export function start() {
-  //your code here
-  // return true
+ 
+return true
 };
 
 /******************************************************************************
@@ -31,8 +31,12 @@ received is an even number.
 HINT: Use the modulo operator (%) Google it! 😊
 ******************************************************************************/
 
-export const oddOrEven = () => {
-  //your code here
+export const oddOrEven = (number) => {
+  if (number % 2 === 0) {
+    return "Even" 
+  } else{
+    return "Odd"
+  } 
 };
 
 /******************************************************************************
@@ -47,8 +51,10 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
 
-export function makeMeLoud() {
-  //your code here
+
+export function makeMeLoud(string) {
+  const result = string.toUpperCase()+"!"
+  return result
 }
 
 /******************************************************************************
@@ -72,9 +78,31 @@ The function should return:
 
 ******************************************************************************/
 
-export const greeter = () => {
-  //your code here
+
+export const greeter = (fName, hour) => {
+  
+      if (hour < 0) {
+      return "Invalid time"
+    
+    } else if ( hour >= 0 && hour <= 5) {
+      return ("Good night"+ " "  + fName)
+    
+    } else if (hour >= 6 && hour <= 11) {
+      return ("Good morning"+ " " + fName)
+
+    } else if (hour >= 12 && hour <= 17) {
+      return ("Good day"+ " "  + fName)
+
+    } else if (hour >= 18 && hour <= 23) {
+      return ("Good evening"+ " " + fName)
+ 
+    } else (hour > 23)    
+      return "Invalid time"
+    
+    
+  
 };
+
 
 /******************************************************************************
 4.
@@ -90,8 +118,10 @@ Example 2: ["One", "Two", "Three", "Four", "Five", "Six"] should return
 ["Two", "Three", "Four", "Five"]
 ******************************************************************************/
 
-export function arrayTrimmer() {
-  //your code here
+export function arrayTrimmer(arr) {
+  arr.pop() 
+  arr.shift()
+  return arr
 }
 
 /******************************************************************************
@@ -113,8 +143,8 @@ Example3: "   hard        " should return "fun"
 
 ******************************************************************************/
 
-export const cleanAndFun = () => {
-  //your code here
+export const cleanAndFun = (string) => {
+  return string.trim().replace("hard","fun")
 };
 
 /******************************************************************************
@@ -137,8 +167,13 @@ Use array methods to do the following:
  Return the resulting array.
 ******************************************************************************/
 
-export function marvelEditor() {
-  //your code here
+export function marvelEditor(arr) {
+  
+  arr.shift()
+  arr[2] = "Skrull"
+  arr.splice(0,2,"Captain America")
+  const result =  arr.join("💪")
+  return result
 }
 
 /******************************************************************************
@@ -168,9 +203,20 @@ Return "😎Primitive values only😎"
 
 ******************************************************************************/
 
-export function coolMaker() {
-  //your code here
-}
+export function coolMaker(input){
+  if (typeof input === "string"){
+    return "😎" + input + "😎"
+  }else if (typeof input === "number") {
+    return "😎" + (2*input).toString() + "😎"
+  }else if (typeof input === "boolean") {
+    if (input === true){
+      return "😎Yeah😎"
+    }else{ 
+      return "😎Chill😎"}
+  } else {
+    return "😎Primitive values only😎"
+  } 
+} 
 
 /******************************************************************************
 8.
